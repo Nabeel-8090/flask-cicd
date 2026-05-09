@@ -35,7 +35,7 @@ def add_student():
     student = {"id": next_id, "name": data['name'], "grade": data['grade']}
     students.append(student)
     next_id += 1
-    return jsonify(students), 201
+    return jsonify(student), 201
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
