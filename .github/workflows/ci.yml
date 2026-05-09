@@ -28,7 +28,7 @@ jobs:
               run: python -m pytest test_app.py -v
 
             - name: Verify health endpoint exists
-              run: python -c "from app import app; asert '/api/health' in [r.rule for r in app.url_map.iter_rules()]"
+              run: python -c "from app import app; assert '/api/health' in [r.rule for r in app.url_map.iter_rules()]"
 
     build-docker:
         name: Build Docker Image
